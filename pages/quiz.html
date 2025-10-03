@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz</title>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/css/style.css">
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+  <!-- GoogleFonts CDN -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet" />
+
+</head>
+
+<body>
+  <div class="m-5">
+    <button onclick="window.location.href = '../index.html#eduplay'"
+      class="flex text-center items-center font-poppins font-semibold gap-2 cursor-pointer">
+      <img src="../assets/images/icon/arrow-left.png" alt="" class="w-[10px]" />
+      <h1>Kembali</h1>
+    </button>
+  </div>
+
+
+  <section id="game">
+    <div class="flex p-15">
+      <div class="flex font-semibold items-center text-4xl gap-5">
+        <img src="../assets/images/icon/brain.svg" alt="" class="w-[60px]" />
+        <h1>Flash Card</h1>
+      </div>
+    </div>
+
+  <div class="flex gap-10 mx-auto justify-center" id="cards-container">
+  <div class="card h-[250px] w-[200px] cursor-pointer relative">
+    <div class="frontCard"><img src="../assets/images/card/game/front/s.png" alt=""></div>
+    <div class="backCard"><img src="../assets/images/card/game/back/s.png" alt=""></div>
+  </div>
+  <div class="card h-[250px] w-[200px] cursor-pointer relative">
+    <div class="frontCard"><img src="../assets/images/card/game/front/menolak.png" alt=""></div>
+    <div class="backCard"><img src="../assets/images/card/game/back/menolak.png" alt=""></div>
+  </div>
+  <div class="card h-[250px] w-[200px] cursor-pointer relative">
+    <div class="frontCard"><img src="../assets/images/card/game/front/p.png" alt=""></div>
+    <div class="backCard"><img src="../assets/images/card/game/back/p.png" alt=""></div>
+  </div>
+  <div class="card h-[250px] w-[200px] cursor-pointer relative">
+    <div class="frontCard"><img src="../assets/images/card/game/front/berjanji.png" alt=""></div>
+    <div class="backCard"><img src="../assets/images/card/game/back/berjanji.png" alt=""></div>
+  </div>
+</div>
+
+<a id="next-btn" class="flex justify-center text-center items-center mt-20 cursor-pointer">
+  <div class="bg-gradient-to-r from-[#3B8EFF] to-[#235599] px-25 py-1 rounded-full text-white font-medium text-lg">
+    <h1>Uji ingatan mu selanjutnya</h1>
+  </div>
+</a>
+
+    <div class="flex p-15">
+      <div class="flex font-semibold items-center text-4xl gap-5">
+        <img src="../assets/images/icon/lamp.svg" alt="" class="w-[60px]" />
+        <h1>Quick Quiz</h1>
+      </div>
+    </div>
+
+    <div class="flex flex-col justify-center  items-center" id="quiz">
+      <img id="quizImage" src="" alt="quizImage" class="w-[500px] h-auto py-10">
+      <div id="quizOption" class="grid grid-cols-2 gap-10 w-[550px] text-white font-bold text-3xl">
+      </div>
+      <button id="selanjutnyaBtn"
+       ></button>
+    </div>
+
+    <div id="popUp" class="hidden fixed inset-0 bg-black/50 flex items-center justify-center z-50">
+      <div class="flex flex-col justify-center">
+        <img id="popUpImage" alt="popUp" class="w-[200px] mx-auto">
+        <button id="closePopUp"
+          class="px-4 py-2 bg-gradient-to-r from-[#3B8EFF] to-[#235599] rounded-full text-white">Selanjutnya</button>
+      </div>
+    </div>
+  </section>
+
+  <footer id="footer" class="mt-50">
+    <div
+      class="bg-gradient-to-b from-[#3B8EFF] to-[#235599] rounded-tl-4xl rounded-tr-4xl flex gap-20 px-15 py-15 text-white justify-evenly">
+      <div class="flex flex-col gap-1 w-[85%]">
+        <img src="/assets/images/home/footer-logo.png" alt="" class="w-[250px]">
+        <p class=" my-5">platform edukasi dan komunikasi inklusif berbasis web yang menghadirkan kamus isyarat, ruang
+          belajar
+          interaktif, serta komunitas kolaboratif untuk mendukung teman non-verbal dalam belajar, berkreasi, dan
+          berinteraksi tanpa batas suara.</p>
+        <div class="flex items-center bg-white rounded-full py-1 shadow-md overflow-hidden w-[400px]">
+          <input type="email" placeholder="Masukan Email"
+            class="flex-1 px-4 py-1 text-sm text-gray-700 placeholder-gray-400 focus:outline-none">
+          <button
+            class=" mx-2 bg-gradient-to-r from-blue-500 to-blue-600 text-white text-sm font-medium px-7 py-1 rounded-full hover:from-blue-600 hover:to-blue-700 transition">
+            Kirim
+          </button>
+        </div>
+
+      </div>
+
+      <div class="flex flex-col">
+        <h1 class="text-lg font-semibold my-5">About Company</h1>
+        <p class="text-sm font-light">Kami, tim dari SMK Negeri Mandiri 26 Jakarta, siap berinovasi dan berkompetisi di
+          ajang Invention.</p>
+        <div class="flex gap-2 py-4">
+          <a href="">
+            <img src="/assets/images/icon/socialmedia/twitter.png" alt="" class="w-[30px]">
+          </a>
+          <a href="">
+            <img src="/assets/images/icon/socialmedia/facebook.png" alt="" class="w-[30px]">
+          </a>
+          <a href="">
+            <img src="/assets/images/icon/socialmedia/instagram.png" alt="" class="w-[30px]">
+          </a>
+          <a href="">
+            <img src="/assets/images/icon/socialmedia/linkedin.png" alt="" class="w-[30px]">
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <script src="/javascript/quiz.js"></script>
+</body>
+
+</html>

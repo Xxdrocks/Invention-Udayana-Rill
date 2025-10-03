@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kebutuhan Harian</title>
+
+  <link rel="stylesheet" href="/css/style.css" />
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+  <!-- GoogleFonts CDN -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body>
+  <section class="blueBackground h-full w-full overflow-y-hidden">
+    <div class="p-5 m-5 flex justify-between">
+      <button onclick="window.location.href = './pemilihan.html'"
+        class="flex text-center items-center font-poppins font-semibold gap-2 cursor-pointer">
+        <img src="../assets/images/icon/arrow-left2.png" alt="" class="w-[20px]" />
+        <h1 class="text-xl text-white">Kembali</h1>
+      </button>
+
+      <img src="../assets/images/card/title.png" alt="" class="right-10 top-5 h-[90px] absolute">
+    </div>
+
+    <div class="flex items-center justify-center mt-10">
+      <div class="bg-[#8EC3F7] rounded-2xl p-10 w-[700px] shadow-xl">
+        <div id="inputBox"
+          class="flex flex-wrap gap-4 min-h-[60px] bg-[#346CA3] rounded-xl p-4 justify-center items-center mb-6 max-w-[600px] mx-auto">
+        </div>
+        <div id="pilihKondisi" class="flex flex-wrap gap-4 justify-center pt-5">
+          <img src="../assets/images/card/game/PapanBantuan/1.png" alt="" class="cursor-move object-cover w-auto h-[60px]" />
+          <img src="../assets/images/card/game/PapanBantuan/2.png" alt="" class="cursor-move object-cover w-auto h-[60px]" />
+          <img src="../assets/images/card/game/PapanBantuan/3.png" alt="" class="cursor-move object-cover w-auto h-[60px]" />
+          <img src="../assets/images/card/game/PapanBantuan/4.png" alt="" class="cursor-move object-cover w-auto h-[60px]" />
+          <img src="../assets/images/card/game/PapanBantuan/5.png" alt="" class="cursor-move object-cover w-auto h-[60px]" />
+          <img src="../assets/images/card/game/PapanBantuan/6.png" alt="" class="cursor-move object-cover w-auto h-[60px]" />
+          <img src="../assets/images/card/game/PapanBantuan/7.png" alt="" class="cursor-move object-cover w-auto h-[60px]" />
+          <img src="../assets/images/card/game/PapanBantuan/8.png" alt="" class="cursor-move object-cover w-auto h-[60px]" />
+          <img src="../assets/images/card/game/PapanBantuan/9.png" alt="" class="cursor-move object-cover w-auto h-[60px]" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <script src="../javascript/papanbantuan.js"></script>
+</body>
+
+</html>

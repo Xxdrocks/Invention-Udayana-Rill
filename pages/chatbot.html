@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teman Cerita</title>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/css/style.css">
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+  <!-- GoogleFonts CDN -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet" />
+
+</head>
+
+<body class="chatBackground h-screen flex flex-col">
+
+  <!-- Header start -->
+
+  <a href="/index.html#eduplay" class="flex items-center gap-3 p-6">
+    <img src="/assets/images/icon/arrow-left.png" alt="back" class="w-3 h-auto cursor-pointer">
+    <h1 class="font-semibold cursor-pointer">Kembali</h1>
+  </a>
+
+  <div class="absolute flex flex-col left-0 right-0 top-10 items-center text-center">
+    <div class="mb-4">
+      <img src="/assets/images/icon/logo.png" alt="logo" class="w-8 mx-auto">
+    </div>
+    <h1 class="font-semibold tracking-wide text-xl">Bagaimana hari mu hari ini?</h1>
+  </div>
+
+  <!-- Header end -->
+
+  <!-- Input Box Start -->
+
+  <div id="chatBox" class="flex flex-col gap-3 px-[15%] mt-6 overflow-y-auto max-h-[800px] flex-1"></div>
+
+  <div class="flex flex-col justify-center items-center">
+    <div class="flex flex-col items-start">
+      <div class="mood">
+      <h2 class="text-gray-700 font-medium">Ceritakan mood mu hari ini</h2>
+        <div class="flex flex-wrap justify-center gap-4">
+          <button class="moodBtn bg-white px-5 py-2 rounded-full shadow hover:bg-blue-50"
+            data-question="saya merasa senang hari ini">Saya merasa senang hari ini</button>
+          <button class="moodBtn bg-white px-5 py-2 rounded-full shadow hover:bg-blue-50"
+            data-question="saya sangat sedih hari ini">Saya sangat sedih hari ini :(</button>
+          <button class="moodBtn bg-white px-5 py-2 rounded-full shadow hover:bg-blue-50"
+            data-question="saya merasa gelisah dan bingung">Saya merasa gelisah dan bingung</button>
+        </div>
+      </div>
+      
+      <div class="pt-5 flex justify-center pb-20">
+        <div class="flex items-center bg-white rounded-2xl shadow-md px-5 py-3 w-[900px]">
+          <input id="chatInput" type="text" placeholder="Ceritakan perasaan mu saat ini"
+            class="flex-1 text-gray-700 placeholder-[#56637E] focus:outline-none">
+          <button id="sendBtn" class="ml-3 hover:opacity-70">
+            <img src="/assets/images/icon/send.png" alt="send" class="w-6">
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Input Box End -->
+
+  <script src="/javascript/dataset.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Invention</title>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+  <!-- GoogleFonts CDN -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body>
+
+  <!-- Navbar Start -->
+
+  <header>
+    <nav class="fixed z-20 font-poppins font-semibold right-0 bg-[#ebebeb7c] m-6 rounded-full glassy">
+      <div class="flex gap-10 py-2 px-5 ">
+        <div class="flex gap-9">
+          <a href="#home" class="hover:text-[#235599] transition duration-300 ease-in-out">Beranda</a>
+          <a href="#funedu" class="hover:text-[#235599] transition duration-300 ease-in-out">FunEdu</a>
+          <a href="#eduplay" class="hover:text-[#235599] transition duration-300 ease-in-out">EduPlay</a>
+          <a href="#footer" class="hover:text-[#235599] transition duration-300 ease-in-out">Kontak</a>
+        </div>
+
+        <div class="flex flex-col">
+          <div id="loginBtn"
+            class="flex items-center gap-3 cursor-pointer hover:text-[#235599] transition duration-300 ease-in-out">
+            <img src="assets/images/icon/people.png" alt="User Icon" class="w-[20px]" />
+            <span id="userName">Login</span>
+          </div>
+
+          <div id="loginContent"
+            class="logIn flex absolute top-full right-0 mt-2 bg-[#ebebeb7c] rounded-2xl shadow-lg  min-w-[250px]">
+            <div class="bg-white flex rounded-xl">
+              <input type="text" id="nameInput" placeholder="Nama kamu..."
+                class="w-full px-5 py-2 rounded-lg focus:outline-none focus:border-[#235599]" />
+              <img src="./assets/images/icon/log-pencil.png" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Home Start -->
+
+    <main class="flex flex-col overflow-x-hidden">
+      <section id="home" class="lg:relative flex flex-col w-full h-screen justify-center lg:items-start items-center">
+        <div class="w-full flex flex-col justify-center items-center">
+          <img src="assets/images/home/background.svg" alt="Background blue"
+            class="md:flex xl:flex w-11/12 mx-auto hidden" />
+          <div
+            class="lg:absolute w-full flex lg:flex-row md:flex-row flex-col items-center left-1/2 -translate-x-1/2 justify-center gap-4 px-4">
+            <h1
+              class="lg:text-[var(--white-100)] lg:items-start text-black font-bold text-center mx-4 text-2xl md:text-4xl leading-normal typeAnimation">
+              Belajar dan Berkreasi<br class="hidden md:inline" />
+              Tanpa Batasan Suara
+            </h1>
+            <img src="assets/images/home/group.png" alt="Ilustrasi grup belajar" class="w-[45%]" />
+          </div>
+        </div>
+
+        <div
+          class="flex p-3 gap-4 w-[42%] text-xs md:text-xl font-bold rounded-full lg:text-[var(--white-100)] bg-[var(--tertiary-color)] ml-15 mt-[-65px] cursor-pointer">
+          <div class="searchButton">
+            <input type="text" placeholder="Cari disini.." class="searchBar rounded-full text-sm p-2" />
+            <img src="assets/images/icon/search.svg" alt="Search Icon" class="searchIcon" />
+            <p class="searchLabel">Apa yang ingin kamu jelajahi?</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Home End -->
+
+      <!-- FunEdu Start -->
+
+      <section>
+        <div class="flex flex-col items-center text-center">
+          <h1 class="font-semibold md:text-4xl w-10/12 md:w-6/12">
+            Apa itu
+            <span class="bg-gradient-to-r from-[#3B8EFF] to-[#235599] bg-clip-text text-transparent">
+              Teman Tanda
+            </span>
+            ?
+          </h1>
+
+          <div class="flex flex-col md:flex-row justify-center py-20 gap-10 px-8 md:px-16 text-left">
+            <div class="bg-[var(--secondary-color)] p-5 w-full md:w-1/3 rounded-3xl box">
+              <img src="assets/images/home/book.png" alt="" class="py-4 w-[70px]" />
+              <div class="">
+                <h2 class="font-semibold text-2xl text-[var(--primary-color)] py-3">
+                  Kamus Isyarat
+                </h2>
+                <p class="text-[var(--quaternary-color)] fontsize-[14px]">
+                  Jelajahi ribuan kosakata bahasa isyarat dengan gambar & video
+                  interaktif.
+                </p>
+              </div>
+            </div>
+
+            <div class="bg-[var(--primary-color)] p-5 w-full md:w-1/3 rounded-3xl box">
+              <img src="assets/images/home/lamp.png" alt="" class="py-4 w-[70px]" />
+              <div class="">
+                <h2 class="font-semibold text-2xl text-[var(--secondary-color)] py-3">
+                  Ruang Belajar & Quiz
+                </h2>
+                <p class="text-[var(--quaternary-color)] fontsize-[14px]">
+                  Tonton video pembelajaran, lalu uji kemampuanmu lewat kuis
+                  seru & flashcard.
+                </p>
+              </div>
+            </div>
+
+            <div class="bg-[var(--secondary-color)] p-5 w-full md:w-1/3 rounded-3xl box">
+              <img src="assets/images/home/community.png" alt="" class="py-4 w-[70px]" />
+              <div class="">
+                <h2 class="font-semibold text-2xl text-[var(--primary-color)] py-2">
+                  Teman Bercerita
+                </h2>
+                <p class="text-[var(--quaternary-color)] fontsize-[14px]">
+                  Ekspresikan dirimu lewat papan interaktif dan bagikan cerita
+                  bersama AI bot yang siap mendengarkan di TemanTanda.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="funedu" class="w-screen">
+        <div class="flex flex-row items-center text-center my-10 ml-10">
+          <img src="assets/images/icon/pencil.svg" alt="" class="w-[50px]" />
+          <h1 class="font-semibold md:text-4xl w-10/12 md:w-6/12">
+            Belajar Bersama
+            <span class="bg-gradient-to-r from-[#3B8EFF] to-[#235599] bg-clip-text text-transparent">
+              Teman Tanda
+            </span>
+            ?
+          </h1>
+        </div>
+
+        <div class="flex flex-col md:flex-row justify-center">
+          <div class="w-1/5">
+            <h1 class="font-semibold text-3xl text-[var(--primary-color)] py-20">
+              ABC Song in Sign Language 
+            </h1>
+            <p class="text-[1rem] font-medium">
+              Tidak hanya BISINDO dan SIBI,
+              <span class="bg-gradient-to-r from-[#3B8EFF] to-[#235599] bg-clip-text text-transparent">
+                Teman Tanda
+              </span>
+              dapat mengeksplor bahasa isyarat internasional yang digunakan di
+              berbagai belahan dunia!
+            </p>
+            <button onclick="window.location.href = '#eduplay'"
+              class="my-7 px-5 py-1 font-semibold bg-gradient-to-b from-[#3B8EFF] to-[#235599] text-white rounded-full cursor-pointer">
+              view more
+            </button>
+          </div>
+
+          <div class="flex">
+            <div class="w-9/12 h-max px-10 my-auto">
+              <iframe class="" width="560" height="339"
+                src="https://www.youtube.com/embed/K_XSMFfy5gU?si=5pQ2i2I9hkKPrXpw" title="YouTube video player"
+                frameborder="0" style="border-radius: 25px"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div class="flex flex-col gap-6">
+              <div class="">
+                <iframe width="284" height="118" src="https://www.youtube.com/embed/QYYMBAEs6Vg?si=vlL34eLm1lcPvPId"
+                  title="YouTube video player" frameborder="0" style="border-radius: 15px"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              </div>
+              <div class="">
+                <iframe width="284" height="118" src="https://www.youtube.com/embed/0FcwzMq4iWg?si=1RDxx2oOQ-EqycPt"
+                  title="YouTube video player" frameborder="0" style="border-radius: 15px"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              </div>
+              <div class="">
+                <iframe width="284" height="118"
+                  src="https://www.youtube.com/embed/6w1ZDaE-whc?si=esmK8oZXAkkGtQ-F&amp;start=1"
+                  title="YouTube video player" frameborder="0" style="border-radius: 25px"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- FunEdu End -->
+
+        <!-- EduPLay Start -->
+
+        <div class="grid grid-cols-2 py-8 px-10 gap-5 w-full justify-between" id="eduplay">
+          <div class="relative overflow-hidden">
+            <a href="./pages/chatbot.html">
+              <img src="/assets/images/home/Cover/maskot2.png" alt=""
+                class="absolute w-[240px] left-10 bottom-0 maskot" />
+              <img src="/assets/images/home/Cover/teman.png" alt="" class="w-full mx-auto rounded-3xl block" />
+            </a>
+          </div>
+          <div class="relative overflow-hidden">
+            <a href="./pages/kamus.html">
+              <img src="/assets/images/home/Cover/maskot4.png" alt=""
+                class="absolute w-[240px] right-10 bottom-0 maskot" />
+              <img src="/assets/images/home/Cover/kamus.png" alt="" class="w-full mx-auto rounded-3xl block" />
+            </a>
+          </div>
+          <div class="relative overflow-hidden">
+            <a href="./pages/pemilihan.html">
+              <img src="/assets/images/home/Cover/maskot.png" alt=""
+                class="absolute w-[240px] left-10 bottom-0 maskot" />
+              <img src="/assets/images/home/Cover/papan.png" alt="" class="w-full mx-auto rounded-3xl block" />
+            </a>
+          </div>
+          <div class="relative overflow-hidden">
+            <a href="./pages/quiz.html">
+              <img src="/assets/images/home/Cover/maskot3.png" alt=""
+                class="absolute w-[240px] right-10 bottom-0 maskot" />
+              <img src="/assets/images/home/Cover/misi.png" alt="" class="w-full mx-auto rounded-3xl block" />
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- EduPLay End -->
+
+      <!-- Rating Start -->
+
+      <section>
+        <div class="w-full flex flex-col justify-center items-center">
+          <div
+            class="w-180 flex flex-col p-2 bg-[#ffffff] w-7/12 rounded-2xl text-center text-center font-semibold text-4xl mb-[-30px] relative">
+            <h1 class="text-center">
+              Bagaimana Perasaan
+              <span class="bg-gradient-to-r from-[#3B8EFF] to-[#235599] bg-clip-text text-transparent">Teman</span>
+              Saat ini
+            </h1>
+          </div>
+          <div class="lg:max-w-10xl max-w-6xl mx-10 -mt-2 overflow-hidden justify-center rounded-3xl">
+            <div class="">
+              <canvas id="canvas" class="block bg-[#D9D9D9] transition duration-300 ease-in-out">
+              </canvas>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="w-full py-20 bg-white">
+        <div class="">
+          <h2 class="text-3xl font-bold text-center mb-12">
+            Apa yang
+            <span class="bg-gradient-to-r from-[#3B8EFF] to-[#235599] bg-clip-text text-transparent">Teman</span>
+            rasakan?
+          </h2>
+
+          <div id="rating" class="flex gap-10 overflow-x-auto overflow-y-hidden py-20 h-115 scroll-smooth select-none">
+            <div
+              class="ratingCard bg-gradient-to-b from-[#3B8EFF] to-[#235599] rounded-xl w-[350px] h-50 flex-shrink-0 p-5 justify-center flex flex-col gap-8 text-white font-medium">
+              <div class="flex flex-row gap-5">
+                <img src="assets/images/card/person/client.png" alt=""
+                  class="rounded-full w-[50px] aspect-square bg-white" />
+                <div class="flex flex-col items-start">
+                  <h1 class="font-bold text-lg">Andi</h1>
+                  <div class="flex flex-row">
+                    <img src="assets/images/card/star.png" alt="" />
+                    <img src="assets/images/card/star.png" alt="" />
+                    <img src="assets/images/card/star.png" alt="" />
+                    <img src="assets/images/card/star.png" alt="" />
+                    <img src="assets/images/card/star.png" alt="" />
+                  </div>
+                </div>
+              </div>
+              <p class="text-sm">
+                TemanTanda sangat membantu saya belajar bahasa isyarat dengan
+                mudah. Visual dan videonya interaktif banget!
+              </p>
+            </div>
+            <div
+              class="ratingCard bg-gradient-to-b from-[#3B8EFF] to-[#235599] rounded-xl w-[350px] h-50 flex-shrink-0 p-5 justify-center flex flex-col gap-8 text-white font-medium">
+              <div class="flex flex-row gap-5">
+                <img src="assets/images/card/person/client2.png" alt=""
+                  class="rounded-full w-[50px] aspect-square bg-white" />
+                <div class="flex flex-col items-start">
+                  <h1 class="font-bold text-lg">Andi</h1>
+                  <div class="flex flex-row">
+                    <img src="assets/images/card/star.png" alt="" />
+                    <img src="assets/images/card/star.png" alt="" />
+                    <img src="assets/images/card/star.png" alt="" />
+                    <img src="assets/images/card/star.png" alt="" />
+                    <img src="assets/images/card/star.png" alt="" />
+                  </div>
+                </div>
+              </div>
+              <p class="text-sm">
+                TemanTanda sangat membantu saya belajar bahasa isyarat dengan
+                mudah. Visual dan videonya interaktif banget!
+              </p>
+            </div>
+            <div
+              class="ratingCard bg-gradient-to-b from-[#3B8EFF] to-[#235599] rounded-xl w-[350px] h-50 flex-shrink-0 p-5 justify-center flex flex-col gap-8 text-white font-medium">
+              <div class="flex flex-row gap-5">
+                <img src="assets/images/card/person/client3.png" alt=""
+                  class="rounded-full w-[50px] aspect-square bg-white" />
+                <div class="flex flex-col items-start">
+                  <h1 class="font-bold text-lg">Andi</h1>
+                  <div class="flex flex-row">
+                    <img src="assets/images/card/star.png" alt="" />
+                    <img src="assets/images/card/star.png" alt="" />
+                    <img src="assets/images/card/star.png" alt="" />
+                    <img src="assets/images/card/star.png" alt="" />
+                    <img src="assets/images/card/star.png" alt="" />
+                  </div>
+                </div>
+              </div>
+              <p class="text-sm">
+                TemanTanda sangat membantu saya belajar bahasa isyarat dengan
+                mudah. Visual dan videonya interaktif banget!
+              </p>
+            </div>
+            <div
+              class="ratingCard bg-gradient-to-b from-[#3B8EFF] to-[#235599] rounded-xl w-[350px] h-50 flex-shrink-0 p-5 justify-center flex flex-col gap-8 text-white font-medium">
+              <div class="flex flex-row gap-5">
+                <img src="assets/images/card/person/client4.png" alt=""
+                  class="rounded-full w-[50px] aspect-square bg-white" />
+                <div class="flex flex-col items-start">
+                  <h1 class="font-bold text-lg">Andi</h1>
+                  <div class="flex flex-row">
+                    <img src="assets/images/card/star.png" alt="" />
+                    <img src="assets/images/card/star.png" alt="" />
+                    <img src="assets/images/card/star.png" alt="" />
+                    <img src="assets/images/card/star.png" alt="" />
+                    <img src="assets/images/card/star.png" alt="" />
+                  </div>
+                </div>
+              </div>
+              <p class="text-sm">
+                TemanTanda sangat membantu saya belajar bahasa isyarat dengan
+                mudah. Visual dan videonya interaktif banget!
+              </p>
+            </div>
+            <div
+              class="ratingCard bg-gradient-to-b from-[#3B8EFF] to-[#235599] rounded-xl w-[350px] h-50 flex-shrink-0 p-5 justify-center flex flex-col gap-8 text-white font-medium">
+              <div class="flex flex-row gap-5">
+                <img src="assets/images/card/person/client5.png" alt=""
+                  class="rounded-full w-[50px] aspect-square bg-white" />
+                <div class="flex flex-col items-start">
+                  <h1 class="font-bold text-lg">Andi</h1>
+                  <div class="flex flex-row">
+                    <img src="assets/images/card/star.png" alt="" />
+                    <img src="assets/images/card/star.png" alt="" />
+                    <img src="assets/images/card/star.png" alt="" />
+                    <img src="assets/images/card/star.png" alt="" />
+                    <img src="assets/images/card/star.png" alt="" />
+                  </div>
+                </div>
+              </div>
+              <p class="text-sm">
+                TemanTanda sangat membantu saya belajar bahasa isyarat dengan
+                mudah. Visual dan videonya interaktif banget!
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Rating Start -->
+
+    <!-- Footer Start -->
+
+    <footer id="footer">
+      <div
+        class="bg-gradient-to-b from-[#3B8EFF] to-[#235599] rounded-tl-4xl rounded-tr-4xl flex gap-20 px-15 py-15 text-white justify-evenly">
+        <div class="flex flex-col gap-1 w-[85%]">
+          <img src="assets/images/home/footer-logo.png" alt="" class="w-[250px]" />
+          <p class="my-5">
+            platform edukasi dan komunikasi inklusif berbasis web yang
+            menghadirkan kamus isyarat, ruang belajar interaktif, serta
+            komunitas kolaboratif untuk mendukung teman non-verbal dalam
+            belajar, berkreasi, dan berinteraksi tanpa batas suara.
+          </p>
+          <div class="flex items-center bg-white rounded-full py-1 shadow-md overflow-hidden w-[400px]">
+            <input type="email" placeholder="Masukan Email"
+              class="flex-1 px-4 py-1 text-sm text-gray-700 placeholder-gray-400 focus:outline-none" />
+            <button
+              class="mx-2 bg-gradient-to-r from-blue-500 to-blue-600 text-white text-sm font-medium px-7 py-1 rounded-full hover:from-blue-600 hover:to-blue-700 transition">
+              Kirim
+            </button>
+          </div>
+        </div>
+
+        <div class="flex flex-col">
+          <h1 class="text-lg font-semibold my-5">About Company</h1>
+          <p class="text-sm font-light">
+            Kami, tim dari SMK Negeri Mandiri 26 Jakarta, siap berinovasi dan
+            berkompetisi di ajang Invention.
+          </p>
+          <div class="flex gap-2 py-4">
+            <a href="">
+              <img src="assets/images/icon/socialmedia/twitter.png" alt="" class="w-[30px]" />
+            </a>
+            <a href="">
+              <img src="assets/images/icon/socialmedia/facebook.png" alt="" class="w-[30px]" />
+            </a>
+            <a href="">
+              <img src="assets/images/icon/socialmedia/instagram.png" alt="" class="w-[30px]" />
+            </a>
+            <a href="">
+              <img src="assets/images/icon/socialmedia/linkedin.png" alt="" class="w-[30px]" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- footer end -->
+
+    <script src="javascript/main.js"></script>
+    <script src="javascript/rating.js"></script>
+</body>
+
+</html>
