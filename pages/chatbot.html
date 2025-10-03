@@ -30,7 +30,7 @@
     <h1 class="font-semibold cursor-pointer">Kembali</h1>
   </a>
 
-  <div class="absolute flex flex-col left-0 right-0 top-10 items-center text-center">
+  <div class=" flex flex-col items-center text-center">
     <div class="mb-4">
       <img src="/assets/images/icon/logo.png" alt="logo" class="w-8 mx-auto">
     </div>
@@ -44,21 +44,21 @@
   <div id="chatBox" class="flex flex-col gap-3 px-[15%] mt-6 overflow-y-auto max-h-[800px] flex-1"></div>
 
   <div class="flex flex-col justify-center items-center">
-    <div class="flex flex-col items-start">
-      <div class="mood">
-      <h2 class="text-gray-700 font-medium">Ceritakan mood mu hari ini</h2>
+    <div class="flex flex-col items-start ">
+      <div class="mood lg:flex lg:flex-col hidden">
+        <h2 class="text-gray-700 lg:font-medium">Ceritakan mood mu hari ini</h2>
         <div class="flex flex-wrap justify-center gap-4">
-          <button class="moodBtn bg-white px-5 py-2 rounded-full shadow hover:bg-blue-50"
+          <button class="moodBtn bg-white lg:px-5 lg:py-2 rounded-full shadow hover:bg-blue-50"
             data-question="saya merasa senang hari ini">Saya merasa senang hari ini</button>
-          <button class="moodBtn bg-white px-5 py-2 rounded-full shadow hover:bg-blue-50"
+          <button class="moodBtn bg-white lg:px-5 lg:py-2 rounded-full shadow hover:bg-blue-50"
             data-question="saya sangat sedih hari ini">Saya sangat sedih hari ini :(</button>
-          <button class="moodBtn bg-white px-5 py-2 rounded-full shadow hover:bg-blue-50"
+          <button class="moodBtn bg-white lg:px-5 lg:py-2 rounded-full shadow hover:bg-blue-50"
             data-question="saya merasa gelisah dan bingung">Saya merasa gelisah dan bingung</button>
         </div>
       </div>
       
       <div class="pt-5 flex justify-center pb-20">
-        <div class="flex items-center bg-white rounded-2xl shadow-md px-5 py-3 w-[900px]">
+        <div class="flex items-center bg-white rounded-2xl shadow-md px-5 py-3 lg:w-[900px] w-[350px]">
           <input id="chatInput" type="text" placeholder="Ceritakan perasaan mu saat ini"
             class="flex-1 text-gray-700 placeholder-[#56637E] focus:outline-none">
           <button id="sendBtn" class="ml-3 hover:opacity-70">
