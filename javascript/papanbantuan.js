@@ -1,7 +1,7 @@
-// Kebutuhan Harian Start
+// Papan Bantuan Start
 const pilihKondisi = document.getElementById('pilihKondisi');
 const inputBox = document.getElementById('inputBox');
-let draggedItem = null;
+let draggedItem = null, offsetX = 0, offsetY = 0;
 
 const soundData = {
   '1.png': '../assets/audio/PapanBantuan/1.mp3',
@@ -23,34 +23,65 @@ const soundData = {
   '17.png': '../assets/audio/PapanBantuan/17.mp3',
   '18.png': '../assets/audio/PapanBantuan/18.mp3',
   '19.png': '../assets/audio/PapanBantuan/19.mp3',
-}
+};
 
 function playSound(imgPath) {
   const imgName = imgPath.split('/').pop();
   const soundSrc = soundData[imgName];
-  
   if(soundSrc) {
     const audio = new Audio(soundSrc);
-    audio.play().catch(error => console.error('Gagal memutar suara:', error));
+    audio.play().catch(() => {});
   }
 }
 
 function dragAndDrop() {
-  const images = document.querySelectorAll('#pilihKondisi img');
-  
+  const images = document.querySelectorAll('#pilihKondisi img, #inputBox img');
   images.forEach(img => {
     img.setAttribute('draggable', 'true');
-    
-    img.addEventListener('dragstart', (e) => {
+    img.addEventListener('dragstart', () => {
       draggedItem = img;
-      img.classList.add('dragging');
       img.style.opacity = '0.5';
     });
-    
-    img.addEventListener('dragend', (e) => {
+    img.addEventListener('dragend', () => {
       draggedItem = null;
-      img.classList.remove('dragging');
       img.style.opacity = '1';
+    });
+
+    img.addEventListener('touchstart', (e) => {
+      draggedItem = img;
+      const rect = img.getBoundingClientRect();
+      offsetX = e.touches[0].clientX - rect.left;
+      offsetY = e.touches[0].clientY - rect.top;
+      img.style.position = 'absolute';
+      img.style.zIndex = '1000';
+      img.style.opacity = '0.7';
+    });
+
+    img.addEventListener('touchmove', (e) => {
+      if (!draggedItem) return;
+      e.preventDefault();
+      const x = e.touches[0].clientX - offsetX;
+      const y = e.touches[0].clientY - offsetY;
+      img.style.left = x + 'px';
+      img.style.top = y + 'px';
+    }, { passive: false });
+
+    img.addEventListener('touchend', (e) => {
+      if (!draggedItem) return;
+      const dropTarget = document.elementFromPoint(e.changedTouches[0].clientX, e.changedTouches[0].clientY);
+      if (dropTarget && dropTarget.closest('#inputBox')) {
+        inputBox.appendChild(draggedItem);
+        playSound(draggedItem.src);
+      } else if (dropTarget && dropTarget.closest('#pilihKondisi')) {
+        pilihKondisi.appendChild(draggedItem);
+      }
+      draggedItem.style.position = '';
+      draggedItem.style.left = '';
+      draggedItem.style.top = '';
+      draggedItem.style.zIndex = '';
+      draggedItem.style.opacity = '1';
+      draggedItem = null;
+      dragAndDrop();
     });
   });
 }
@@ -60,28 +91,20 @@ function dragAndDrop() {
     e.preventDefault();
     board.style.backgroundColor = board === inputBox ? '#2d5a8a' : '#7ab5f0';
   });
-  
-  board.addEventListener('dragleave', (e) => {
+  board.addEventListener('dragleave', () => {
     board.style.backgroundColor = board === inputBox ? '#346CA3' : '#8EC3F7';
   });
-  
   board.addEventListener('drop', (e) => {
     e.preventDefault();
     board.style.backgroundColor = board === inputBox ? '#346CA3' : '#8EC3F7';
-    
     if (draggedItem) {
       board.appendChild(draggedItem);
-
-      if(board === inputBox) {
-        playSound(draggedItem.src);
-      }
+      if(board === inputBox) playSound(draggedItem.src);
     }
-
     dragAndDrop();
   });
 });
 
 document.addEventListener('DOMContentLoaded', dragAndDrop);
 
-
-// Kebutuhan Harian End
+// Papan Bantuan End

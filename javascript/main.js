@@ -184,6 +184,91 @@ function animate() {
   requestAnimationFrame(animate);
 }
 
+function getPointerPosition(e) {
+  const rect = canvas.getBoundingClientRect();
+  let clientX, clientY;
+
+  if (e.touches && e.touches.length > 0) {
+    clientX = e.touches[0].clientX;
+    clientY = e.touches[0].clientY;
+  } else {
+    clientX = e.clientX;
+    clientY = e.clientY;
+  }
+
+  return {
+    x: clientX - rect.left,
+    y: clientY - rect.top
+  };
+}
+
+// --- Event untuk mouse ---
+canvas.addEventListener("mousedown", (e) => {
+  const { x: mx, y: my } = getPointerPosition(e);
+
+  for (let p of particles) {
+    if (p.isMouseInside(mx, my)) {
+      canvas.style.background = p.color;
+      draggingTag = p;
+      p.dragging = true;
+      offsetX = mx - p.x;
+      offsetY = my - p.y;
+      break;
+    }
+  }
+});
+
+canvas.addEventListener("mousemove", (e) => {
+  if (draggingTag) {
+    const { x: mx, y: my } = getPointerPosition(e);
+    draggingTag.x = mx - offsetX;
+    draggingTag.y = my - offsetY;
+    draggingTag.vx = 0;
+    draggingTag.vy = 0;
+  }
+});
+
+canvas.addEventListener("mouseup", () => {
+  if (draggingTag) {
+    draggingTag.dragging = false;
+    draggingTag = null;
+  }
+});
+
+// --- Event untuk touch (HP) ---
+canvas.addEventListener("touchstart", (e) => {
+  const { x: mx, y: my } = getPointerPosition(e);
+
+  for (let p of particles) {
+    if (p.isMouseInside(mx, my)) {
+      canvas.style.background = p.color;
+      draggingTag = p;
+      p.dragging = true;
+      offsetX = mx - p.x;
+      offsetY = my - p.y;
+      break;
+    }
+  }
+});
+
+canvas.addEventListener("touchmove", (e) => {
+  if (draggingTag) {
+    e.preventDefault();
+    const { x: mx, y: my } = getPointerPosition(e);
+    draggingTag.x = mx - offsetX;
+    draggingTag.y = my - offsetY;
+    draggingTag.vx = 0;
+    draggingTag.vy = 0;
+  }
+}, { passive: false });
+
+canvas.addEventListener("touchend", () => {
+  if (draggingTag) {
+    draggingTag.dragging = false;
+    draggingTag = null;
+  }
+});
+
 canvas.addEventListener("mousedown", (e) => {
   const rect = canvas.getBoundingClientRect();
   const mx = e.clientX - rect.left;
