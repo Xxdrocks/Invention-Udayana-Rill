@@ -35,14 +35,12 @@
         </div>
 
         <div class="flex flex-col">
-          <div id="loginBtn"
-            class="flex items-center gap-3 cursor-pointer hover:text-[#235599] transition duration-300 ease-in-out">
+          <div id="loginBtn" class="flex items-center gap-3 cursor-pointer hover:text-[#235599] transition duration-300 ease-in-out">
             <img src="assets/images/icon/people.png" alt="User Icon" class="w-[20px]" />
             <span id="userName">Login</span>
           </div>
 
-          <div id="loginContent"
-            class="logIn flex absolute top-full right-0 mt-2 bg-[#ebebeb7c] rounded-2xl shadow-lg  min-w-[250px]">
+          <div id="loginContent" class="logIn flex absolute top-full right-0 mt-2 bg-[#ebebeb7c] rounded-2xl shadow-lg  min-w-[250px]">
             <div class="bg-white flex rounded-xl">
               <input type="text" id="nameInput" placeholder="Nama kamu..."
                 class="w-full px-5 py-2 rounded-lg focus:outline-none focus:border-[#235599]" />
@@ -57,7 +55,7 @@
     <!-- Home Start -->
 
     <main class="flex flex-col overflow-x-hidden">
-      <section id="home" class="lg:relative flex flex-col w-full h-screen justify-center lg:items-start items-center">
+      <section id="home" class="lg:relative lg:flex hidden flex-col w-full h-screen justify-center lg:items-start items-center">
         <div class="w-full flex flex-col justify-center items-center">
           <img src="assets/images/home/background.svg" alt="Background blue"
             class="md:flex xl:flex w-11/12 mx-auto hidden" />
@@ -152,7 +150,7 @@
         </div>
 
         <div class="flex flex-col md:flex-row justify-center">
-          <div class="w-1/5">
+          <div class="w-1/5 hidden lg:flex lg:flex-col">
             <h1 class="font-semibold text-3xl text-[var(--primary-color)] py-20">
               ABC Song in Sign Language 
             </h1>
@@ -170,7 +168,7 @@
             </button>
           </div>
 
-          <div class="flex">
+          <div class="flex flex-col justify-center items-center lg:flex-row ">
             <div class="w-9/12 h-max px-10 my-auto">
               <iframe class="" width="560" height="339"
                 src="https://www.youtube.com/embed/K_XSMFfy5gU?si=5pQ2i2I9hkKPrXpw" title="YouTube video player"
@@ -206,32 +204,32 @@
 
         <!-- EduPLay Start -->
 
-        <div class="grid grid-cols-2 py-8 px-10 gap-5 w-full justify-between" id="eduplay">
+        <div class="lg:grid lg:grid-cols-2 py-8 px-10 gap-5 w-full flex flex-col" id="eduplay">
           <div class="relative overflow-hidden">
             <a href="./pages/chatbot.html">
               <img src="/assets/images/home/Cover/maskot2.png" alt=""
-                class="absolute w-[240px] left-10 bottom-0 maskot" />
+                class="absolute lg:w-[240px] left-10 w-[140px] bottom-0 maskot" />
               <img src="/assets/images/home/Cover/teman.png" alt="" class="w-full mx-auto rounded-3xl block" />
             </a>
           </div>
           <div class="relative overflow-hidden">
             <a href="./pages/kamus.html">
               <img src="/assets/images/home/Cover/maskot4.png" alt=""
-                class="absolute w-[240px] right-10 bottom-0 maskot" />
+                class="absolute lg:w-[240px] right-10 w-[140px] bottom-0 maskot" />
               <img src="/assets/images/home/Cover/kamus.png" alt="" class="w-full mx-auto rounded-3xl block" />
             </a>
           </div>
           <div class="relative overflow-hidden">
             <a href="./pages/pemilihan.html">
               <img src="/assets/images/home/Cover/maskot.png" alt=""
-                class="absolute w-[240px] left-10 bottom-0 maskot" />
+                class="absolute lg:w-[240px] left-10 w-[140px] bottom-0 maskot" />
               <img src="/assets/images/home/Cover/papan.png" alt="" class="w-full mx-auto rounded-3xl block" />
             </a>
           </div>
           <div class="relative overflow-hidden">
             <a href="./pages/quiz.html">
               <img src="/assets/images/home/Cover/maskot3.png" alt=""
-                class="absolute w-[240px] right-10 bottom-0 maskot" />
+                class="absolute lg:w-[240px] right-10 w-[140px] bottom-0 maskot" />
               <img src="/assets/images/home/Cover/misi.png" alt="" class="w-full mx-auto rounded-3xl block" />
             </a>
           </div>
