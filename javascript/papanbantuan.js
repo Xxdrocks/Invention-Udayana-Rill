@@ -28,23 +28,43 @@ const soundData = {
 function playSound(imgPath) {
   const imgName = imgPath.split('/').pop();
   const soundSrc = soundData[imgName];
-  if(soundSrc) {
+  if (soundSrc) {
     const audio = new Audio(soundSrc);
     audio.play().catch(() => {});
   }
+}
+
+function moveToBox(img, target) {
+  if (target === inputBox) {
+    inputBox.appendChild(img);
+    playSound(img.src);
+  } else {
+    pilihKondisi.appendChild(img);
+  }
+  dragAndDrop();
 }
 
 function dragAndDrop() {
   const images = document.querySelectorAll('#pilihKondisi img, #inputBox img');
   images.forEach(img => {
     img.setAttribute('draggable', 'true');
+
     img.addEventListener('dragstart', () => {
       draggedItem = img;
       img.style.opacity = '0.5';
     });
+
     img.addEventListener('dragend', () => {
       draggedItem = null;
       img.style.opacity = '1';
+    });
+
+    img.addEventListener('click', () => {
+      if (img.parentElement === pilihKondisi) {
+        moveToBox(img, inputBox);
+      } else {
+        moveToBox(img, pilihKondisi);
+      }
     });
 
     img.addEventListener('touchstart', (e) => {
@@ -68,12 +88,14 @@ function dragAndDrop() {
 
     img.addEventListener('touchend', (e) => {
       if (!draggedItem) return;
-      const dropTarget = document.elementFromPoint(e.changedTouches[0].clientX, e.changedTouches[0].clientY);
+      const dropTarget = document.elementFromPoint(
+        e.changedTouches[0].clientX,
+        e.changedTouches[0].clientY
+      );
       if (dropTarget && dropTarget.closest('#inputBox')) {
-        inputBox.appendChild(draggedItem);
-        playSound(draggedItem.src);
+        moveToBox(draggedItem, inputBox);
       } else if (dropTarget && dropTarget.closest('#pilihKondisi')) {
-        pilihKondisi.appendChild(draggedItem);
+        moveToBox(draggedItem, pilihKondisi);
       }
       draggedItem.style.position = '';
       draggedItem.style.left = '';
@@ -81,7 +103,6 @@ function dragAndDrop() {
       draggedItem.style.zIndex = '';
       draggedItem.style.opacity = '1';
       draggedItem = null;
-      dragAndDrop();
     });
   });
 }
@@ -98,10 +119,8 @@ function dragAndDrop() {
     e.preventDefault();
     board.style.backgroundColor = board === inputBox ? '#346CA3' : '#8EC3F7';
     if (draggedItem) {
-      board.appendChild(draggedItem);
-      if(board === inputBox) playSound(draggedItem.src);
+      moveToBox(draggedItem, board);
     }
-    dragAndDrop();
   });
 });
 
