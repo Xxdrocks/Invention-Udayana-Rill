@@ -25,7 +25,7 @@
   <!-- Navbar Start -->
 
   <header>
-    <nav class="fixed z-20 font-poppins font-semibold right-0 bg-[#ebebeb7c] m-6 rounded-full glassy">
+    <nav class="lg:flex fixed hidden z-20 font-poppins font-semibold right-0 bg-[#ebebeb7c] m-6 rounded-full glassy">
       <div class="flex gap-10 py-2 px-5 ">
         <div class="flex gap-9">
           <a href="#home" class="hover:text-[#235599] transition duration-300 ease-in-out">Beranda</a>
@@ -35,12 +35,14 @@
         </div>
 
         <div class="flex flex-col">
-          <div id="loginBtn" class="flex items-center gap-3 cursor-pointer hover:text-[#235599] transition duration-300 ease-in-out">
+          <div id="loginBtn"
+            class="flex items-center gap-3 cursor-pointer hover:text-[#235599] transition duration-300 ease-in-out">
             <img src="assets/images/icon/people.png" alt="User Icon" class="w-[20px]" />
             <span id="userName">Login</span>
           </div>
 
-          <div id="loginContent" class="logIn flex absolute top-full right-0 mt-2 bg-[#ebebeb7c] rounded-2xl shadow-lg  min-w-[250px]">
+          <div id="loginContent"
+            class="logIn flex absolute top-full right-0 mt-2 bg-[#ebebeb7c] rounded-2xl shadow-lg  min-w-[250px]">
             <div class="bg-white flex rounded-xl">
               <input type="text" id="nameInput" placeholder="Nama kamu..."
                 class="w-full px-5 py-2 rounded-lg focus:outline-none focus:border-[#235599]" />
@@ -55,7 +57,19 @@
     <!-- Home Start -->
 
     <main class="flex flex-col overflow-x-hidden">
-      <section id="home" class="lg:relative lg:flex hidden flex-col w-full h-screen justify-center lg:items-start items-center">
+       <div class="lg:hidden flex flex-col">
+          <img src="assets/images/home/mobile-background.svg" alt="">
+          <div class="absolute flex flex-col justify-center">
+            <h1
+              class="hidden text-[var(--white-100)] font-bold text-center mx-4 text-2xl lg:text-4xl leading-normal typeAnimation">
+              Belajar dan Berkreasi<br class="hidden md:inline" />
+              Tanpa Batasan Suara
+            </h1>
+            <img src="assets/images/home/group.png" alt="Ilustrasi grup belajar" class="w-[45%]" />
+          </div>
+        </div>
+      <section id="home"
+        class="lg:relative lg:flex hidden flex-col w-full h-screen justify-center lg:items-start items-center">
         <div class="w-full flex flex-col justify-center items-center">
           <img src="assets/images/home/background.svg" alt="Background blue"
             class="md:flex xl:flex w-11/12 mx-auto hidden" />
@@ -145,11 +159,10 @@
             <span class="bg-gradient-to-r from-[#3B8EFF] to-[#235599] bg-clip-text text-transparent">
               Teman Tanda
             </span>
-            ?
           </h1>
         </div>
 
-        <div class="flex flex-col md:flex-row justify-center">
+        <div class="w-full flex flex-col md:flex-row justify-center items-center">
           <div class="w-1/5 hidden lg:flex lg:flex-col">
             <h1 class="font-semibold text-3xl text-[var(--primary-color)] py-20">
               ABC Song in Sign Language 
@@ -168,9 +181,9 @@
             </button>
           </div>
 
-          <div class="flex flex-col justify-center items-center lg:flex-row lg:gap-0 gap-6">
-            <div class="lg:w-9/12 h-max px-10 my-auto">
-              <iframe class="lg:w-[560px] lg:h-[339px] w-[284px] h-[118px]" width="560" height="339"
+          <div class="w-full flex flex-col justify-center items-center lg:flex-row lg:gap-0 gap-6">
+            <div class="lg:w-9/12 h- px-10 my-auto">
+              <iframe class="lg:w-[560px] lg:h-[339px] w-[334px] h-[180px]" width="560" height="339"
                 src="https://www.youtube.com/embed/K_XSMFfy5gU?si=5pQ2i2I9hkKPrXpw" title="YouTube video player"
                 frameborder="0" style="border-radius: 25px"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -178,19 +191,21 @@
             </div>
             <div class="flex flex-col gap-6">
               <div class="">
-                <iframe width="284" height="118" src="https://www.youtube.com/embed/QYYMBAEs6Vg?si=vlL34eLm1lcPvPId"
-                  title="YouTube video player" frameborder="0" style="border-radius: 15px"
+                <iframe class="lg:w-[284px] lg:h-[118px] w-[334px] h-[180px]" width="284" height="118"
+                  src="https://www.youtube.com/embed/QYYMBAEs6Vg?si=vlL34eLm1lcPvPId" title="YouTube video player"
+                  frameborder="0" style="border-radius: 15px"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
               </div>
               <div class="">
-                <iframe width="284" height="118" src="https://www.youtube.com/embed/0FcwzMq4iWg?si=1RDxx2oOQ-EqycPt"
-                  title="YouTube video player" frameborder="0" style="border-radius: 15px"
+                <iframe class="lg:w-[284px] lg:h-[118px] w-[334px] h-[180px]" width="284" height="118"
+                  src="https://www.youtube.com/embed/0FcwzMq4iWg?si=1RDxx2oOQ-EqycPt" title="YouTube video player"
+                  frameborder="0" style="border-radius: 15px"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
               </div>
               <div class="">
-                <iframe width="284" height="118"
+                <iframe class="lg:w-[284px] lg:h-[118px] w-[334px] h-[180px]" width="284" height="118"
                   src="https://www.youtube.com/embed/6w1ZDaE-whc?si=esmK8oZXAkkGtQ-F&amp;start=1"
                   title="YouTube video player" frameborder="0" style="border-radius: 25px"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -204,7 +219,16 @@
 
         <!-- EduPLay Start -->
 
-        <div class="lg:grid lg:grid-cols-2 py-8 px-10 gap-5 w-full flex flex-col" id="eduplay">
+        <div class="lg:hidden flex flex-row items-center py-10 text-center ml-10">
+          <img src="assets/images/icon/lamp.svg" alt="" class="w-[50px]" />
+          <h1 class="font-semibold md:text-4xl w-10/12 md:w-6/12">
+            Bermain Bersama
+            <span class="bg-gradient-to-r from-[#3B8EFF] to-[#235599] bg-clip-text text-transparent">
+              Teman Tanda
+            </span>
+          </h1>
+        </div>
+        <div class="lg:grid lg:grid-cols-2 px-10 gap-5 w-full flex flex-col" id="eduplay">
           <div class="relative overflow-hidden">
             <a href="./pages/chatbot.html">
               <img src="/assets/images/home/Cover/maskot2.png" alt=""
@@ -243,7 +267,7 @@
       <section>
         <div class="w-full flex flex-col justify-center items-center">
           <div
-            class="w-180 flex flex-col p-2 bg-[#ffffff] w-7/12 rounded-2xl text-center text-center font-semibold text-4xl mb-[-30px] relative">
+            class="w-180 flex flex-col p-2 bg-[#ffffff] rounded-2xl text-center text-center font-semibold text-4xl mb-[-30px] relative">
             <h1 class="text-center">
               Bagaimana Perasaan
               <span class="bg-gradient-to-r from-[#3B8EFF] to-[#235599] bg-clip-text text-transparent">Teman</span>
@@ -385,7 +409,7 @@
     <footer id="footer">
       <div
         class="bg-gradient-to-b from-[#3B8EFF] to-[#235599] rounded-tl-4xl rounded-tr-4xl flex gap-20 px-15 py-15 text-white justify-evenly">
-        <div class="flex flex-col gap-1 w-[85%]">
+        <div class="lg:flex flex-col gap-1 w-[85%] hidden ">
           <img src="assets/images/home/footer-logo.png" alt="" class="w-[250px]" />
           <p class="my-5">
             platform edukasi dan komunikasi inklusif berbasis web yang
