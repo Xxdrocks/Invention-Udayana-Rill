@@ -202,7 +202,6 @@ function getPointerPosition(e) {
   };
 }
 
-// --- Event untuk mouse ---
 canvas.addEventListener("mousedown", (e) => {
   const { x: mx, y: my } = getPointerPosition(e);
 
@@ -235,7 +234,6 @@ canvas.addEventListener("mouseup", () => {
   }
 });
 
-// --- Event untuk touch (HP) ---
 canvas.addEventListener("touchstart", (e) => {
   const { x: mx, y: my } = getPointerPosition(e);
 
@@ -253,7 +251,7 @@ canvas.addEventListener("touchstart", (e) => {
 
 canvas.addEventListener("touchmove", (e) => {
   if (draggingTag) {
-    e.preventDefault();
+    e.preventDefault(); 
     const { x: mx, y: my } = getPointerPosition(e);
     draggingTag.x = mx - offsetX;
     draggingTag.y = my - offsetY;
@@ -263,43 +261,6 @@ canvas.addEventListener("touchmove", (e) => {
 }, { passive: false });
 
 canvas.addEventListener("touchend", () => {
-  if (draggingTag) {
-    draggingTag.dragging = false;
-    draggingTag = null;
-  }
-});
-
-canvas.addEventListener("mousedown", (e) => {
-  const rect = canvas.getBoundingClientRect();
-  const mx = e.clientX - rect.left;
-  const my = e.clientY - rect.top;
-
-  for (let p of particles) {
-    if (p.isMouseInside(mx, my)) {
-
-      canvas.style.background = p.color;
-
-      draggingTag = p;
-      p.dragging = true;
-      offsetX = mx - p.x;
-      offsetY = my - p.y;
-      break;
-    }
-  }
-});
-
-
-canvas.addEventListener("mousemove", (e) => {
-  if (draggingTag) {
-    const rect = canvas.getBoundingClientRect();
-    draggingTag.x = e.clientX - rect.left - offsetX;
-    draggingTag.y = e.clientY - rect.top - offsetY;
-    draggingTag.vx = 0;
-    draggingTag.vy = 0;
-  }
-});
-
-canvas.addEventListener("mouseup", () => {
   if (draggingTag) {
     draggingTag.dragging = false;
     draggingTag = null;
